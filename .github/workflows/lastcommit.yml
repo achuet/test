@@ -10,7 +10,7 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
       - name: Dump job context
         env:
-          JOB_CONTEXT: ${{ toJson(job) }}
+          JOB_CONTEXT: ${{ github.event.head_commit.message }}
         run: echo "$JOB_CONTEXT"
       - name: Dump steps context
         env:
