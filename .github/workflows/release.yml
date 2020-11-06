@@ -14,5 +14,5 @@ jobs:
           route: GET /repos/:repository/releases/latest
           repository: ${{ github.repository }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB2_TOKEN }}
       - run: "echo latest release: ${{ steps.get_latest_release.outputs.data }}"
