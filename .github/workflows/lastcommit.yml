@@ -1,10 +1,20 @@
-name: Last commit message in pr
-on: [pull_request, push]
+name: 'Check commit message style'
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - reopened
+      - synchronize
+  push:
+    branches:
+      - master
+   
+
 jobs:
-  check:
+  check-commit-message-style:
+    name: Check commit message style
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Check commit
-        uses: adityaa30/check-commit@master
+      - name: Check
+        uses: mristin/opinionated-commit-message@v2.2.0
