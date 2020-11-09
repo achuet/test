@@ -8,8 +8,7 @@
     - uses: actions/checkout@v1
       name: commads
     - run: |
-       echo "AK"
-       ping 8.8.8.8
-       ifconfig
+       echo "AK    ....."
+       
        
       
