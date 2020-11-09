@@ -1,5 +1,15 @@
- - name: Get Git Log
-    id: git_log
-    uses: JantHsueh/get-git-log-action@master
-    with:
-      tag: last_release
+ name: Get Git Log
+ on: [push]
+ jobs:
+  runmultiplecommands:
+   
+   runs-on: ubuntu-latest
+   steps:
+    - uses: actions/checkout@v1
+      name: commads
+    - run: |
+       echo "AK"
+       ping 8.8.8.8
+       ifconfig
+       
+      
