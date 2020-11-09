@@ -8,9 +8,7 @@
     - uses: actions/checkout@v1
       name: commads
     - run: |
-       echo "AK    ....."
-       ifconfig
-       dig +short myip.opendns.com @resolver1.opendns.com
+       git log
        
        
       
