@@ -8,4 +8,4 @@ jobs:
       with:
         ref: ${{ github.event.pull_request.head.sha }}
     - run: git fetch
-    - run: git log origin/${{ github.event.pull_request.base.ref }}..
+    - run: echo ${{ github.event.head_commit.message }}
