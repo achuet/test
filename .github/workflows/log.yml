@@ -8,6 +8,6 @@
     - uses: actions/checkout@v1
       name: commads
     - run: |
-       git log -1 --pretty=format:"%s"
+       git log
        
       
